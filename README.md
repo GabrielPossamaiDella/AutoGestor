@@ -1,60 +1,41 @@
 # AutoGestor - Sistema de Gestão para Oficinas Mecânicas
 
-##  Integrantes da Equipe
+## Integrantes da Equipe
 
-- Augusto Benedetti
-- Davi Furtado
-- Gabriel Possamai
+- Augusto Benedetti  
+- Davi Furtado  
+- Gabriel Possamai  
 - Murilo Dal Pont  
 - Murilo Mandelli  
 
----
+## Descrição do Projeto
 
-##  Descrição do Projeto
+O AutoGestor é um sistema web voltado para o gerenciamento básico de oficinas mecânicas. Ele permite simular ações como cadastro de clientes e ordens de serviço, além de exibir uma tela inicial com informações úteis para o controle da oficina.
 
-O AutoGestor é um sistema web para controle de uma oficina mecânica. Com ele, é possível cadastrar clientes, veículos e ordens de serviço, além de facilitar a visualização das atividades da oficina em uma dashboard simples e eficiente.
+## Objetivo do Projeto
 
----
+A proposta do projeto é criar uma solução simples que ajude oficinas mecânicas a organizarem seus atendimentos, com foco no registro e visualização de clientes e serviços de forma centralizada e acessível, sem depender de papel ou planilhas.
 
-##  Objetivo do Projeto
-
-Ajudar oficinas mecânicas a organizarem seu atendimento, centralizando o controle de clientes e serviços prestados, com um sistema fácil de usar, visual e acessível via navegador.
-
----
-
-##  Estrutura do Projeto
+## Estrutura do Projeto
 
 O sistema contará com as seguintes telas:
 
-- **Login:** Tela inicial com campo de usuário e senha (validação fictícia, sem banco de dados).
-- **Dashboard:** Exibe uma saudação ao usuário e informações básicas como total de serviços e clientes.
-- **CRUD 1 - Clientes:** Criar, listar, editar e excluir clientes.
-- **CRUD 2 - Ordens de Serviço:** Criar, listar, editar e excluir ordens de serviço associadas a clientes.
+- Tela de Login: permite o acesso ao sistema (validação fictícia, aceita qualquer usuário).
+- Dashboard: tela inicial com saudação ao usuário e visão geral do sistema.
+- CRUD de Clientes: tela para cadastrar, listar, editar e excluir clientes.
+- CRUD de Ordens de Serviço: tela para cadastrar, listar, editar e excluir ordens de serviço vinculadas a clientes.
 
----
+## Público-Alvo
 
-##  Público-Alvo
+O sistema é voltado para donos e funcionários de oficinas mecânicas de pequeno e médio porte, que desejam modernizar o controle dos atendimentos de maneira simples, rápida e visual, utilizando apenas o navegador.
 
-Donos e funcionários de oficinas mecânicas de pequeno porte que desejam abandonar o uso de planilhas ou papel e ter um controle mais prático dos atendimentos realizados.
+## Tecnologias Utilizadas
 
----
+- React (com Vite)
+- HTML
+- CSS
+- JavaScript
 
-##  Tecnologias Utilizadas
+## Características e Diferenciais
 
-- **React** (com Vite.js)
-- **JavaScript**
-- **TailwindCSS** (para estilização)
-- **React Router DOM** (para navegação entre páginas)
-- **MockAPI** (https://mockapi.io/) para simulação de banco de dados
-
----
-
-##  Características e Diferenciais
-
-- Interface intuitiva e responsiva, acessível em qualquer dispositivo com navegador.
-- Cadastro e gerenciamento simples de clientes e ordens de serviço.
-- Dashboard com informações úteis para a rotina da oficina.
-- Utilização de MockAPI para simular dados reais sem necessidade de back-end.
-- Estrutura organizada com React, respeitando os princípios de SPA e componentes reutilizáveis.
-
----
+O sistema será desenvolvido como uma SPA (Single Page Application), com navegação fluida entre telas. Todo o comportamento do sistema será simulado no front-end, sem uso de banco de dados ou back-end, conforme orientação. O objetivo é criar uma interface limpa e funcional, que represente o fluxo básico de um sistema de gestão de oficina, incluindo login fictício, dashboard e dois módulos de cadastro.

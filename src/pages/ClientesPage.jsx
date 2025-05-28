@@ -1,10 +1,10 @@
-import React, { useState } from 'react'; // useState para gerenciar dados e formulários
+import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 
 function ClientesPage() {
   const [clientes, setClientes] = useState([
-    { id: 1, nome: 'Cliente Exemplo 1', telefone: '99999-0001', veiculo: 'Carro A - ABC1234' },
-    { id: 2, nome: 'Cliente Exemplo 2', telefone: '99999-0002', veiculo: 'Moto B - DEF5678' },
+    { id: 1, nome: 'José Alberto', telefone: '99999-0001', veiculo: 'Chevrolet Celta Life - QJC-9269' },
+    { id: 2, nome: 'Marcelo Amaral', telefone: '99999-0002', veiculo: 'Ford Ka Sport - DEF-5678' },
   ]);
 
   const [nomeCliente, setNomeCliente] = useState('');
@@ -70,7 +70,7 @@ function ClientesPage() {
         </div>
         <div>
             <label>Veículo (Modelo - Placa): </label>
-            <input type="text" value={veiculoCliente} onChange={(e) => setVeiculoCliente(e.target.value)} placeholder="Ex: Fiat Uno - XYZ7890"/>
+            <input type="text" value={veiculoCliente} onChange={(e) => setVeiculoCliente(e.target.value)} placeholder="Ex: Fiat Uno - XYZ-7890"/>
         </div>
         <button type="submit">{editandoId !== null ? 'Salvar Alterações' : 'Adicionar Cliente'}</button>
         {editandoId !== null && <button type="button" onClick={() => { setEditandoId(null); setNomeCliente(''); setTelefoneCliente(''); setVeiculoCliente('');}}>Cancelar Edição</button>}

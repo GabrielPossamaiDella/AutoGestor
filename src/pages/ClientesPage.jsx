@@ -1,11 +1,8 @@
-import React, { useState } from 'react'; 
+
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function ClientesPage() {
-  const [clientes, setClientes] = useState([
-    { id: 1, nome: 'José Alberto', telefone: '99999-0001', veiculo: 'Chevrolet Celta Life - QJC-9269' },
-    { id: 2, nome: 'Marcelo Amaral', telefone: '99999-0002', veiculo: 'Ford Ka Sport - DEF-5678' },
-  ]);
+function ClientesPage({ clientes, setClientes }) {
 
   const [nomeCliente, setNomeCliente] = useState('');
   const [telefoneCliente, setTelefoneCliente] = useState('');

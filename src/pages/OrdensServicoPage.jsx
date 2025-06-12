@@ -1,15 +1,11 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './css/OrdensServicoPage.css';
 
-function OrdensServicoPage() {
-  const [ordens, setOrdens] = useState([
-    { id: 1, cliente: 'XPTO', veiculo: 'ABC-1234', descricao: 'Troca de óleo', status: 'Em Andamento' },
-    { id: 2, cliente: 'YZ', veiculo: 'QWE-5678', descricao: 'Reparo no motor', status: 'Concluída' },
-  ]);
+function OrdensServicoPage({ ordens, setOrdens }) {
 
   const [formAberto, setFormAberto] = useState(false);
-
   const [formDados, setFormDados] = useState({
     id: null,
     cliente: '',
@@ -17,7 +13,8 @@ function OrdensServicoPage() {
     descricao: '',
     status: 'Em Andamento',
   });
-
+  
+  
   function abrirFormularioNovo() {
     setFormDados({
       id: null,
@@ -77,53 +74,8 @@ function OrdensServicoPage() {
       {formAberto && (
         <form onSubmit={salvarOrdem} className="formulario">
           <h3>{formDados.id === null ? 'Nova Ordem de Serviço' : `Editar Ordem de Serviço #${formDados.id}`}</h3>
-
-          <label className="label" htmlFor="cliente">Cliente:</label>
-          <input
-            id="cliente"
-            type="text"
-            name="cliente"
-            value={formDados.cliente}
-            onChange={handleChange}
-            required
-            className="input"
-          />
-
-          <label className="label" htmlFor="veiculo">Veículo:</label>
-          <input
-            id="veiculo"
-            type="text"
-            name="veiculo"
-            value={formDados.veiculo}
-            onChange={handleChange}
-            required
-            className="input"
-          />
-
-          <label className="label" htmlFor="descricao">Descrição:</label>
-          <input
-            id="descricao"
-            type="text"
-            name="descricao"
-            value={formDados.descricao}
-            onChange={handleChange}
-            required
-            className="input"
-          />
-
-          <label className="label" htmlFor="status">Status:</label>
-          <select
-            id="status"
-            name="status"
-            value={formDados.status}
-            onChange={handleChange}
-            required
-            className="select"
-          >
-            <option value="Em Andamento">Em Andamento</option>
-            <option value="Concluída">Concluída</option>
-            <option value="Cancelada">Cancelada</option>
-          </select>
+          
+          {/* ... o resto do seu formulário ... */}
 
           <div className="botoes-formulario">
             <button type="submit" className="botao-salvar">Salvar</button>
